@@ -301,6 +301,30 @@ const Index = () => {
                 </div>
               </div>
             </Card>
+
+            <Card className="p-8 bg-card border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                "Заказывал таблички с QR-кодами для выставочного стенда. Всё выполнено идеально — 
+                коды читаются без проблем, металл качественный, смотрится современно и технологично. 
+                Отличное решение для бизнеса, спасибо за оперативность!"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Icon name="User" className="text-primary" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Сергей П.</p>
+                  <p className="text-sm text-muted-foreground">Представитель IT-компании</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
