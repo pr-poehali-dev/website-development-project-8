@@ -111,6 +111,76 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/66466256-19a5-4c2a-b6ff-f5238d500d4e.png"
+                alt="Брелок Alfa Romeo"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Автомобильные брелоки</h3>
+                  <p className="text-muted-foreground">Эксклюзивные брелоки с логотипами автобрендов</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/1a3f3f9f-482f-4496-8a8b-c8be1d839cbe.png"
+                alt="Шильдик BMW M"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Именные шильдики</h3>
+                  <p className="text-muted-foreground">Персонализированные таблички с логотипами</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/dfaab186-b4e5-4186-bb98-81319bc33251.JPG"
+                alt="Гравировка на бутылке водки"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Подарочные бутылки</h3>
+                  <p className="text-muted-foreground">Персональная гравировка на металлических ёмкостях</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/5aea554c-9cc2-4280-8e41-a9cdc3c03858.JPG"
+                alt="Гравировка на ноже"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Гравировка на инструментах</h3>
+                  <p className="text-muted-foreground">Персонализация ножей и других изделий</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/c651b0d5-4352-44f8-95b1-d4751e71832f.JPG"
+                alt="Гравировка на ложке"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Столовые приборы</h3>
+                  <p className="text-muted-foreground">Художественная гравировка на посуде и приборах</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-16 max-w-4xl mx-auto text-center">
