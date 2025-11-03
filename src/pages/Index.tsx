@@ -168,6 +168,62 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="group relative overflow-hidden rounded-lg">
               <img 
+                src="https://cdn.poehali.dev/files/09a1225c-196e-4a02-baf8-3af34e48ea79.png"
+                alt="Брелок с логотипом BMW"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Премиум брелоки</h3>
+                  <p className="text-muted-foreground">Металлические брелоки с корпоративной символикой</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/fb10245e-cbb2-4151-a89f-5d3f7dda2dcf.JPG"
+                alt="Технические шильдики"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Технические таблички</h3>
+                  <p className="text-muted-foreground">Шильдики с VIN-номерами и техническими данными</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/f07e09e4-132c-41f1-8fa1-14f720a7eb22.png"
+                alt="Гравировка на камне"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Гравировка на камне</h3>
+                  <p className="text-muted-foreground">Художественная гравировка на натуральных материалах</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/files/3e7289b1-1a60-45d4-b257-b70bf7c0aa31.JPG"
+                alt="Портреты на металле"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Художественные портреты</h3>
+                  <p className="text-muted-foreground">Фотореалистичные портреты на металлических пластинах</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
                 src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/09cc1db6-e0d1-4b3b-be90-e912300e8891.jpg"
                 alt="Корпоративные VIP-сувениры"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
@@ -175,7 +231,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Корпоративный VIP</h3>
-                  <p className="text-muted-foreground">Элитные ручки, флешки, термосы с ювелирной гравировкой логотипа</p>
+                  <p className="text-muted-foreground">Элитные наборы с ювелирной гравировкой логотипа</p>
                 </div>
               </div>
             </div>
@@ -189,21 +245,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Памятные подарки</h3>
-                  <p className="text-muted-foreground">Часы, зажигалки, жетоны с личными надписями или геральдикой</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-lg">
-              <img 
-                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/47433078-ffcb-4066-bf01-16fff2cdf378.jpg"
-                alt="Техническая маркировка"
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-2">Сложная маркировка</h3>
-                  <p className="text-muted-foreground">Шильдики и таблички с идеальной читаемостью серийных номеров</p>
+                  <p className="text-muted-foreground">Зажигалки и аксессуары с личной гравировкой</p>
                 </div>
               </div>
             </div>
