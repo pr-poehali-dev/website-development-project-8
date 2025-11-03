@@ -262,6 +262,90 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl mb-6">
+              Отзывы <span className="text-primary">Клиентов</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Что говорят о нас те, кто доверил свои проекты
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 bg-card border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                "Заказывали корпоративные подарки для партнеров. Качество гравировки превзошло все ожидания — 
+                каждая деталь проработана идеально. Сувениры получились действительно статусными."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Icon name="User" className="text-primary" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Александр М.</p>
+                  <p className="text-sm text-muted-foreground">Директор компании</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                "Нужно было изготовить технические шильдики с VIN-номерами. Сделали быстро, качественно, 
+                все читается отлично. Точность и профессионализм на высшем уровне."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Icon name="User" className="text-primary" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Дмитрий К.</p>
+                  <p className="text-sm text-muted-foreground">Владелец автосервиса</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                "Заказывала портреты на металле в подарок родителям. Работа превосходная — 
+                детализация потрясающая, выглядит очень дорого. Спасибо команде за такой уровень!"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Icon name="User" className="text-primary" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Елена В.</p>
+                  <p className="text-sm text-muted-foreground">Частный заказчик</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-32 bg-background relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-5"
