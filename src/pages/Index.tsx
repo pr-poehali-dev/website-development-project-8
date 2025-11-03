@@ -407,7 +407,7 @@ const Index = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">E-mail</h3>
-              <a href="mailto:laserdesign39@yandex.ru" className="text-muted-foreground hover:text-primary transition-colors break-all">
+              <a href="mailto:laserdesign39@yandex.ru" className="text-muted-foreground hover:text-primary transition-colors break-all text-sm">
                 laserdesign39@yandex.ru
               </a>
             </Card>
