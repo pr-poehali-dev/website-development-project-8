@@ -16,9 +16,12 @@ const Index = () => {
         />
         
         <div className="container mx-auto px-4 z-10 text-center animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-6 tracking-tight">
+          <div className="mb-4">
+            <span className="text-primary text-2xl md:text-3xl font-bold tracking-wider">LaserDesign</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight">
             Искусство Лазерной <br />
-            <span className="text-primary font-semibold">Маркировки на Металле</span>
+            <span className="text-primary">Маркировки на Металле</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light">
             Превращаем обычные металлические изделия в <span className="text-primary">статусные сувениры</span> и <span className="text-primary">памятные подарки</span> с безупречной точностью
@@ -41,8 +44,8 @@ const Index = () => {
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-light mb-6">
-              Ваш проект — в руках <span className="text-primary font-semibold">лучших</span>
+            <h2 className="text-4xl md:text-5xl mb-6">
+              Ваш проект — в руках <span className="text-primary">лучших</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Высокое качество начинается не с лазера, а с <span className="text-foreground font-medium">дизайнера</span>. 
@@ -88,8 +91,8 @@ const Index = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-6">
-              Наши <span className="text-primary font-semibold">Преимущества</span>
+            <h2 className="text-4xl md:text-5xl mb-6">
+              Наши <span className="text-primary">Преимущества</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Исключительность в каждой детали
@@ -152,8 +155,8 @@ const Index = () => {
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-6">
-              Эксклюзивные <span className="text-primary font-semibold">Сувениры</span>
+            <h2 className="text-4xl md:text-5xl mb-6">
+              Эксклюзивные <span className="text-primary">Сувениры</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ваша история, выгравированная в металле
@@ -226,9 +229,9 @@ const Index = () => {
         />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-light mb-6">
+            <h2 className="text-4xl md:text-6xl mb-6">
               Обсудите Ваш <br />
-              <span className="text-primary font-semibold">Уникальный Проект</span>
+              <span className="text-primary">Уникальный Проект</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               Ваш VIP-сувенир заслуживает индивидуального подхода. Свяжитесь с нами, 
@@ -252,11 +255,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 Лазерная Маркировка. Все права защищены.
+              © 2024 LaserDesign. Все права защищены.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+79097764353" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                 <Icon name="Phone" size={20} />
+                <span className="text-sm">+7 909 776-43-53</span>
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Icon name="Mail" size={20} />
