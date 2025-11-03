@@ -12,7 +12,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(26, 31, 44, 0.7), rgba(26, 31, 44, 0.9)), url('https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/611fed69-21f5-4e81-a580-97c7aa5f6a23.jpg')`,
+            backgroundImage: `linear-gradient(rgba(26, 31, 44, 0.7), rgba(26, 31, 44, 0.9)), url('https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/a5bd8c32-0f56-4a0e-81f6-e76fe17dee43.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
