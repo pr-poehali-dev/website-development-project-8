@@ -29,16 +29,6 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light">
             Превращаем обычные металлические изделия в <span className="text-primary">статусные сувениры</span> и <span className="text-primary">памятные подарки</span> с безупречной точностью
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer">
-                Заказать Расчет
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10" onClick={() => navigate('/portfolio')}>
-              Смотреть Портфолио
-            </Button>
-          </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
