@@ -303,7 +303,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
@@ -311,8 +311,8 @@ const Index = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">Телефон</h3>
-              <a href="tel:+79097764353" className="text-muted-foreground hover:text-primary transition-colors">
-                +7 909 776-43-53
+              <a href="tel:+79217114353" className="text-muted-foreground hover:text-primary transition-colors">
+                +7 921 711-43-53
               </a>
             </Card>
 
@@ -331,13 +331,25 @@ const Index = () => {
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Icon name="MapPin" size={32} className="text-primary" />
+                  <Icon name="Mail" size={32} className="text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Адрес</h3>
-              <p className="text-muted-foreground">
-                г. Калининград
-              </p>
+              <h3 className="text-xl font-semibold mb-3">E-mail</h3>
+              <a href="mailto:laserdesign39@yandex.ru" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                laserdesign39@yandex.ru
+              </a>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Instagram" size={32} className="text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Instagram</h3>
+              <a href="https://instagram.com/laserdesign_39" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                @laserdesign_39
+              </a>
             </Card>
           </div>
         </div>
