@@ -253,6 +253,54 @@ const Index = () => {
                 </div>
               </div>
             </Card>
+
+            <Card className="p-8 bg-card border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                "Заказывал корпоративные подарки для партнёров — визитницы с логотипом компании. 
+                Маркировка выполнена безупречно, каждая деталь проработана. Партнёры в восторге от качества! 
+                Теперь обращаюсь только сюда для всех представительских сувениров."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Icon name="User" className="text-primary" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Александр М.</p>
+                  <p className="text-sm text-muted-foreground">Директор компании</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+                <Icon name="Star" className="text-primary fill-primary" size={20} />
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                "Сделали памятные медали для спортивного турнира. Работа выполнена быстро и качественно, 
+                дизайн согласовали за день. Участники довольны, медали выглядят статусно и солидно. 
+                Рекомендую для организации мероприятий!"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Icon name="User" className="text-primary" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold">Ирина С.</p>
+                  <p className="text-sm text-muted-foreground">Организатор мероприятий</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
