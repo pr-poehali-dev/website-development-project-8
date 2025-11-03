@@ -283,8 +283,9 @@ const Index = () => {
                 <Icon name="Star" className="text-primary fill-primary" size={20} />
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                "Заказывали корпоративные подарки для партнеров. Качество гравировки превзошло все ожидания — 
-                каждая деталь проработана идеально. Сувениры получились действительно статусными."
+                "Заказывали корпоративные подарки для партнеров. Дизайнеры создали невероятные макеты — 
+                каждая деталь проработана идеально. Качество гравировки премиальное, а цены приятно удивили. 
+                При таком уровне работы ожидали гораздо дороже!"
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -306,8 +307,8 @@ const Index = () => {
                 <Icon name="Star" className="text-primary fill-primary" size={20} />
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                "Нужно было изготовить технические шильдики с VIN-номерами. Сделали быстро, качественно, 
-                все читается отлично. Точность и профессионализм на высшем уровне."
+                "Нужно было срочно изготовить технические шильдики с VIN-номерами. Сделали за 3 дня вместо обещанной недели! 
+                Качество высочайшее, всё читается идеально. Цены демократичные, очень доволен скоростью и профессионализмом."
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -329,8 +330,9 @@ const Index = () => {
                 <Icon name="Star" className="text-primary fill-primary" size={20} />
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                "Заказывала портреты на металле в подарок родителям. Работа превосходная — 
-                детализация потрясающая, выглядит очень дорого. Спасибо команде за такой уровень!"
+                "Заказывала портреты на металле в подарок родителям. Дизайнер виртуозно обработал фотографии — 
+                детализация потрясающая! Сделали за неделю точно в срок. Выглядит очень дорого, а стоимость вполне доступная. 
+                Великолепная работа!"
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
