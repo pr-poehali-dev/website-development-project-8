@@ -19,7 +19,7 @@ const Index = () => {
           <div className="mb-4">
             <span className="text-primary text-2xl md:text-3xl font-bold tracking-wider">LaserDesign</span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
             Искусство Лазерной <br />
             <span className="text-primary">Маркировки на Металле</span>
           </h1>
