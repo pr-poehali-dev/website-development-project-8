@@ -19,8 +19,12 @@ const Index = () => {
         />
         
         <div className="container mx-auto px-4 z-10 text-center animate-fade-in-up">
-          <div className="mb-4">
-            <span className="text-primary text-2xl md:text-3xl font-bold tracking-wider">LaserDesign</span>
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="https://cdn.poehali.dev/files/4982d315-c954-414c-ae74-6dce639d2efc.png" 
+              alt="LaserDesign" 
+              className="h-16 md:h-24 w-auto"
+            />
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 tracking-tight uppercase">
             Искусство Лазерной <br />
