@@ -27,8 +27,10 @@ const Index = () => {
             Превращаем обычные металлические изделия в <span className="text-primary">статусные сувениры</span> и <span className="text-primary">памятные подарки</span> с безупречной точностью
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90">
-              Заказать Расчет
+            <Button size="lg" className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="mailto:laserdesign39@yandex.ru">
+                Заказать Расчет
+              </a>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10">
               Смотреть Портфолио
@@ -238,9 +240,11 @@ const Index = () => {
               чтобы обсудить детали и получить расчет от нашего ведущего дизайнера.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90">
-                <Icon name="Send" className="mr-2" size={20} />
-                Заказать Расчет
+              <Button size="lg" className="text-lg px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                <a href="mailto:laserdesign39@yandex.ru" className="flex items-center">
+                  <Icon name="Send" className="mr-2" size={20} />
+                  Заказать Расчет
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-primary text-primary hover:bg-primary/10">
                 <Icon name="Image" className="mr-2" size={20} />
