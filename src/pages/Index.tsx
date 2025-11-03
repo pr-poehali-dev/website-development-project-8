@@ -168,7 +168,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="group relative overflow-hidden rounded-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/553b7f98-da98-403a-927e-8c40a5aaf1a4.jpg"
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/09cc1db6-e0d1-4b3b-be90-e912300e8891.jpg"
                 alt="Корпоративные VIP-сувениры"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -182,7 +182,7 @@ const Index = () => {
 
             <div className="group relative overflow-hidden rounded-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/7a792eb1-5dff-4dc4-9649-d7e1393cebd6.jpg"
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/2f689d2c-2df6-49fd-8408-5a41c2e90d50.jpg"
                 alt="Памятные подарки"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -196,7 +196,7 @@ const Index = () => {
 
             <div className="group relative overflow-hidden rounded-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/611fed69-21f5-4e81-a580-97c7aa5f6a23.jpg"
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/47433078-ffcb-4066-bf01-16fff2cdf378.jpg"
                 alt="Техническая маркировка"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
