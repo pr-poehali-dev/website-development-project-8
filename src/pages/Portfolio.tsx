@@ -121,7 +121,7 @@ const Portfolio = () => {
               <span className="text-primary font-medium"> высокого вкуса и внимания к деталям</span>.
             </p>
             <Button size="lg" className="text-lg px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href="https://t.me/LaserDesign" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center">
                 <Icon name="Send" className="mr-2" size={20} />
                 Заказать Расчет
               </a>
