@@ -23,7 +23,7 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/4982d315-c954-414c-ae74-6dce639d2efc.png" 
               alt="LaserDesign" 
-              className="h-12 md:h-18 w-auto"
+              className="h-12 md:h-18 w-auto brightness-0 invert"
             />
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 tracking-tight uppercase">
