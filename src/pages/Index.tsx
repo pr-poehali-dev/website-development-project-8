@@ -292,24 +292,63 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 bg-card border-t border-border">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl mb-4 text-foreground">
+              Контакты
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Свяжитесь с нами удобным способом
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Phone" size={32} className="text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Телефон</h3>
+              <a href="tel:+79097764353" className="text-muted-foreground hover:text-primary transition-colors">
+                +7 909 776-43-53
+              </a>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Send" size={32} className="text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Telegram</h3>
+              <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                @laserdesign_39
+              </a>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="MapPin" size={32} className="text-primary" />
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Адрес</h3>
+              <p className="text-muted-foreground">
+                г. Калининград
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-8 bg-background border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
             <p className="text-muted-foreground text-sm">
               © 2024 LaserDesign. Все права защищены.
             </p>
-            <div className="flex gap-6">
-              <a href="tel:+79097764353" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                <Icon name="Phone" size={20} />
-                <span className="text-sm">+7 909 776-43-53</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="Mail" size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="MapPin" size={20} />
-              </a>
-            </div>
           </div>
         </div>
       </footer>
