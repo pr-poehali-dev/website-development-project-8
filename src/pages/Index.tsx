@@ -392,10 +392,9 @@ const Index = () => {
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                   <img
-                    src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png"
+                    src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/640062df-fa08-4f48-85a8-94d3426300fa.png"
                     alt="Max"
-                    className="w-8 h-8 rounded-lg"
-                    style={{ filter: "brightness(0) sepia(1) saturate(3) hue-rotate(5deg)" }}
+                    className="w-8 h-8"
                   />
                 </div>
               </div>
