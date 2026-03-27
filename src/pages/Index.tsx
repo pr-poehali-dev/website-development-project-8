@@ -351,7 +351,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                  <Icon name="Send" className="mr-2" size={20} />
+                  <img src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png" alt="Max" className="w-5 h-5 rounded-md mr-2" />
                   Заказать Расчет
                 </a>
               </Button>
@@ -390,12 +390,11 @@ const Index = () => {
 
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-primary/30 shadow-lg shadow-primary/10">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                   <img
                     src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png"
                     alt="Max"
-                    className="w-full h-full object-cover"
-                    style={{ filter: "hue-rotate(200deg) saturate(0.6) brightness(1.1)" }}
+                    className="w-8 h-8 rounded-lg"
                   />
                 </div>
               </div>
