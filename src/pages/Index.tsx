@@ -2,9 +2,24 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Index = () => {
   const navigate = useNavigate();
+  const [visitCount, setVisitCount] = useState<number>(0);
+
+  useEffect(() => {
+    const key = "ld_visit_count";
+    const visitorKey = "ld_visitor_id";
+    let count = parseInt(localStorage.getItem(key) || "0", 10);
+    const isNew = !localStorage.getItem(visitorKey);
+    if (isNew) {
+      count += 1;
+      localStorage.setItem(visitorKey, "1");
+      localStorage.setItem(key, String(count));
+    }
+    setVisitCount(count);
+  }, []);
   
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -433,7 +448,14 @@ const Index = () => {
 
       <footer className="py-8 bg-background border-t border-border">
         <div className="container mx-auto px-4">
-          <div className="text-center">
+          <div className="text-center space-y-3">
+            <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
+              <Icon name="Users" size={15} className="text-primary/60" />
+              <span>Посетителей сайта:</span>
+              <span className="text-primary font-semibold tabular-nums">
+                {visitCount.toLocaleString("ru-RU")}
+              </span>
+            </div>
             <p className="text-muted-foreground text-sm">
               © 2024 LaserDesign. Все права защищены.
             </p>
