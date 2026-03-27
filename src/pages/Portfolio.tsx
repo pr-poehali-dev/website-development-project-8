@@ -223,6 +223,20 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/7ae9c76c-2ea5-45b3-b944-3f20f4dd0ebc.JPG"
+                alt="Художественная гравировка на термосе"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Гравировка на термосе</h3>
+                  <p className="text-muted-foreground">Художественная иллюстрация на металлическом термосе</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-16 max-w-4xl mx-auto text-center">
