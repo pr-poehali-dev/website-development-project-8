@@ -390,11 +390,16 @@ const Index = () => {
 
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Icon name="Send" size={32} className="text-primary" />
+                <div className="w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-primary/30 shadow-lg shadow-primary/10">
+                  <img
+                    src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png"
+                    alt="Max"
+                    className="w-full h-full object-cover"
+                    style={{ filter: "hue-rotate(200deg) saturate(0.6) brightness(1.1)" }}
+                  />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Telegram</h3>
+              <h3 className="text-xl font-semibold mb-3">Max</h3>
               <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 @LaserDesign
               </a>
