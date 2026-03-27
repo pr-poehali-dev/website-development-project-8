@@ -351,7 +351,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                  <img src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png" alt="Max" className="w-5 h-5 rounded-md mr-2" />
+                  <img src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png" alt="Max" className="w-5 h-5 rounded-md mr-2" style={{ filter: "brightness(0)" }} />
                   Заказать Расчет
                 </a>
               </Button>
@@ -395,6 +395,7 @@ const Index = () => {
                     src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/a24994b8-a86c-460f-90f7-d5d754ee8059.png"
                     alt="Max"
                     className="w-8 h-8 rounded-lg"
+                    style={{ filter: "brightness(0) sepia(1) saturate(3) hue-rotate(5deg)" }}
                   />
                 </div>
               </div>
