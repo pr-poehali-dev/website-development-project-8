@@ -391,7 +391,7 @@ const Index = () => {
               Контакты
             </h2>
             <p className="text-xl text-muted-foreground">
-              Свяжитесь с нами удобным способом
+              Свяжитесь с нами удобным для вас способом
             </p>
           </div>
           
