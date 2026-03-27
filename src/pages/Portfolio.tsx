@@ -181,6 +181,48 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/318bfa15-5f1c-40ef-bea5-74648240283b.JPG"
+                alt="Адресник для питомца"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Адресники для питомцев</h3>
+                  <p className="text-muted-foreground">Именные жетоны с гравировкой для кошек и собак</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/bf47f743-c606-4cec-86a6-34e73c9e0e7a.JPG"
+                alt="Гравировка на ручке"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Именные ручки</h3>
+                  <p className="text-muted-foreground">Гравировка имён и инициалов на фирменных ручках</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/6fca8fd2-8251-46ff-bc6a-1b635ecec22a.JPG"
+                alt="Подарочная табличка"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Подарочные таблички</h3>
+                  <p className="text-muted-foreground">Латунные пластины с персональными надписями для подарков</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-16 max-w-4xl mx-auto text-center">
