@@ -170,14 +170,14 @@ const Portfolio = () => {
 
             <div className="group relative overflow-hidden rounded-lg">
               <img 
-                src="https://cdn.poehali.dev/files/c651b0d5-4352-44f8-95b1-d4751e71832f.JPG"
-                alt="Гравировка на ложке"
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/4aae7efe-bd32-4414-b93b-3d472262a29f.JPG"
+                alt="Гравировка на кожаных изделиях"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">Столовые приборы</h3>
-                  <p className="text-muted-foreground">Художественная гравировка на посуде и приборах</p>
+                  <h3 className="text-2xl font-semibold mb-2">Гравировка на кожаных изделиях</h3>
+                  <p className="text-muted-foreground">Персонализация кошельков, обложек и кожаных аксессуаров</p>
                 </div>
               </div>
             </div>
