@@ -36,9 +36,9 @@ const Index = () => {
         <div className="container mx-auto px-4 z-10 text-center animate-fade-in-up">
           <div className="mb-8 flex justify-center">
             <img 
-              src="https://cdn.poehali.dev/files/4982d315-c954-414c-ae74-6dce639d2efc.png" 
+              src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/b03a7c85-5173-4f53-9720-3654039163f3.png" 
               alt="LaserDesign" 
-              className="h-12 md:h-18 w-auto brightness-0 invert"
+              className="h-24 md:h-32 w-auto"
             />
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 tracking-tight uppercase">
@@ -449,6 +449,13 @@ const Index = () => {
       <footer className="py-8 bg-background border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-3">
+            <div className="flex justify-center mb-2">
+              <img
+                src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/b03a7c85-5173-4f53-9720-3654039163f3.png"
+                alt="LaserDesign"
+                className="h-16 w-auto"
+              />
+            </div>
             <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
               <Icon name="Users" size={15} className="text-primary/60" />
               <span>Посетителей сайта:</span>
