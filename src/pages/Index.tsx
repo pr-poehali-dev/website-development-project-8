@@ -438,8 +438,8 @@ const Index = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">Instagram</h3>
-              <a href="https://instagram.com/laserdesign_39" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                @LaserDesign
+              <a href="https://www.instagram.com/laserdesign_39/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                @laserdesign_39
               </a>
             </Card>
           </div>
