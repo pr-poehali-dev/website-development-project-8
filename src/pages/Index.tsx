@@ -350,7 +350,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <Icon name="Send" className="mr-2" size={20} />
                   Заказать Расчет
                 </a>
@@ -395,8 +395,8 @@ const Index = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">Telegram</h3>
-              <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                @laserdesign_39
+              <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                @LaserDesign
               </a>
             </Card>
 
@@ -420,7 +420,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Instagram</h3>
               <a href="https://instagram.com/laserdesign_39" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                @laserdesign_39
+                @LaserDesign
               </a>
             </Card>
           </div>
