@@ -1,9 +1,22 @@
+import { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [contactsOpen, setContactsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setContactsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
@@ -48,67 +61,58 @@ const Header = () => {
             </button>
           </nav>
 
-          <div className="flex items-center gap-3 md:gap-5">
-            <div className="hidden lg:flex items-center gap-4 text-sm text-muted-foreground">
-              <a
-                href="tel:+79217114353"
-                className="flex items-center gap-1.5 hover:text-primary transition-colors font-medium"
+          <div className="flex items-center gap-3">
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setContactsOpen((v) => !v)}
+                className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium text-primary/60 hover:text-primary transition-colors"
               >
-                <Icon name="Phone" size={14} className="text-primary" />
-                +7 921 711-43-53
-              </a>
-              <span className="text-border">|</span>
-              <a
-                href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-primary transition-colors"
-              >
-                <img
-                  src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/640062df-fa08-4f48-85a8-94d3426300fa.png"
-                  alt="Max"
-                  className="w-3.5 h-3.5"
-                />
-                Max
-              </a>
-              <a
-                href="https://www.instagram.com/laserdesign_39/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-primary transition-colors"
-              >
-                <Icon name="Instagram" size={14} className="text-primary" />
-                Instagram
-              </a>
-            </div>
+                КОНТАКТЫ
+                <Icon name="ChevronDown" size={14} className={`transition-transform duration-200 ${contactsOpen ? "rotate-180" : ""}`} />
+              </button>
 
-            <div className="flex items-center gap-2 lg:hidden">
-              <a
-                href="tel:+79217114353"
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-              >
-                <Icon name="Phone" size={14} className="text-primary" />
-              </a>
-              <a
-                href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-              >
-                <img
-                  src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/640062df-fa08-4f48-85a8-94d3426300fa.png"
-                  alt="Max"
-                  className="w-4 h-4"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/laserdesign_39/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-              >
-                <Icon name="Instagram" size={14} className="text-primary" />
-              </a>
+              {contactsOpen && (
+                <div className="absolute right-0 top-full mt-2 w-56 bg-card border border-border rounded-xl shadow-xl overflow-hidden">
+                  <a
+                    href="tel:+79217114353"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
+                    onClick={() => setContactsOpen(false)}
+                  >
+                    <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary/10">
+                      <Icon name="Phone" size={13} className="text-primary" />
+                    </div>
+                    <span className="text-sm text-foreground">+7 921 711-43-53</span>
+                  </a>
+                  <a
+                    href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
+                    onClick={() => setContactsOpen(false)}
+                  >
+                    <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary/10">
+                      <img
+                        src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/640062df-fa08-4f48-85a8-94d3426300fa.png"
+                        alt="Max"
+                        className="w-3.5 h-3.5"
+                      />
+                    </div>
+                    <span className="text-sm text-foreground">Max — @LaserDesign</span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/laserdesign_39/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
+                    onClick={() => setContactsOpen(false)}
+                  >
+                    <div className="w-7 h-7 flex items-center justify-center rounded-full bg-primary/10">
+                      <Icon name="Instagram" size={13} className="text-primary" />
+                    </div>
+                    <span className="text-sm text-foreground">@laserdesign_39</span>
+                  </a>
+                </div>
+              )}
             </div>
 
             <a
