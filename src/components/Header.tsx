@@ -31,20 +31,20 @@ const Header = () => {
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 location.pathname === "/"
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-primary/60 hover:text-primary"
               }`}
             >
-              Главная
+              ГЛАВНАЯ
             </button>
             <button
               onClick={() => navigate("/portfolio")}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 location.pathname === "/portfolio"
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-primary/60 hover:text-primary"
               }`}
             >
-              Портфолио
+              ПОРТФОЛИО
             </button>
           </nav>
 
