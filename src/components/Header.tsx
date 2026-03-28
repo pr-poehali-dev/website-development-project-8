@@ -68,7 +68,7 @@ const Header = () => {
     <div className="relative" ref={contactsRef}>
       <button
         onClick={() => setContactsOpen((v) => !v)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium text-primary/60 hover:text-primary transition-colors"
+        className="flex items-center gap-1.5 px-5 py-2 rounded-md text-[1.3rem] font-medium text-primary/60 hover:text-primary transition-colors"
       >
         КОНТАКТЫ
         <Icon
