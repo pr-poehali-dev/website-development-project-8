@@ -126,14 +126,6 @@ const Header = () => {
           {/* Десктоп правая часть */}
           <div className="hidden md:flex items-center gap-3">
             <ContactsDropdown />
-            <a
-              href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
-            >
-              Заказать расчёт
-            </a>
           </div>
 
           {/* Мобильная правая часть */}
