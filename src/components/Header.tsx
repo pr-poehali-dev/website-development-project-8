@@ -29,17 +29,30 @@ const contacts = [
   },
 ];
 
+const aboutItems = [
+  { icon: "Layers", title: "Универсальность", text: "Металл, кожа, пластик и камень" },
+  { icon: "RotateCw", title: "Любые формы", text: "Гравировка на цилиндрических поверхностях" },
+  { icon: "ScanLine", title: "Высокая детализация", text: "Поле 300×300 мм, мельчайшие шрифты и логотипы" },
+  { icon: "FileEdit", title: "Помощь с макетом", text: "Поможем подготовить файл для гравировки" },
+];
+
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [contactsOpen, setContactsOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const contactsRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (contactsRef.current && !contactsRef.current.contains(e.target as Node)) {
         setContactsOpen(false);
+      }
+      if (aboutRef.current && !aboutRef.current.contains(e.target as Node)) {
+        setAboutOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClick);
@@ -49,6 +62,7 @@ const Header = () => {
   useEffect(() => {
     setMobileOpen(false);
     setContactsOpen(false);
+    setAboutOpen(false);
   }, [location.pathname]);
 
   const navLink = (path: string, label: string) => (
@@ -64,10 +78,51 @@ const Header = () => {
     </button>
   );
 
-  const ContactsDropdown = () => (
-    <div className="relative" ref={dropdownRef}>
+  const AboutDropdown = () => (
+    <div className="relative" ref={aboutRef}>
       <button
-        onClick={() => setContactsOpen((v) => !v)}
+        onClick={() => { setAboutOpen((v) => !v); setContactsOpen(false); }}
+        className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium text-primary/60 hover:text-primary transition-colors"
+      >
+        О НАС
+        <Icon
+          name="ChevronDown"
+          size={14}
+          className={`transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {aboutOpen && (
+        <div className="absolute left-0 top-full mt-2 w-80 bg-card border border-border rounded-xl shadow-xl overflow-hidden z-50">
+          <div className="px-5 pt-4 pb-3 border-b border-border">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">О нашей мастерской</p>
+            <h3 className="text-base font-semibold text-foreground leading-snug">Точность. Надёжность. Качество.</h3>
+          </div>
+          <div className="px-5 py-3 border-b border-border">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Оптоволоконный лазер 30 Вт — маркировка врезается в материал и остаётся навсегда.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-px bg-border">
+            {aboutItems.map((item) => (
+              <div key={item.title} className="bg-card px-4 py-3 hover:bg-primary/5 transition-colors">
+                <div className="flex items-center gap-2 mb-1">
+                  <Icon name={item.icon as Parameters<typeof Icon>[0]["name"]} size={13} className="text-primary shrink-0" />
+                  <span className="text-xs font-semibold text-foreground">{item.title}</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-snug">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  const ContactsDropdown = () => (
+    <div className="relative" ref={contactsRef}>
+      <button
+        onClick={() => { setContactsOpen((v) => !v); setAboutOpen(false); }}
         className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium text-primary/60 hover:text-primary transition-colors"
       >
         КОНТАКТЫ
@@ -121,6 +176,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-1">
             {navLink("/", "ГЛАВНАЯ")}
             {navLink("/portfolio", "ПОРТФОЛИО")}
+            <AboutDropdown />
           </nav>
 
           {/* Десктоп правая часть */}
@@ -146,17 +202,39 @@ const Header = () => {
         <div className="md:hidden bg-card border-t border-border px-4 py-4 flex flex-col gap-1">
           {navLink("/", "ГЛАВНАЯ")}
           {navLink("/portfolio", "ПОРТФОЛИО")}
-          <div className="pt-3 mt-2 border-t border-border">
-            <a
-              href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-sm font-semibold w-full hover:bg-primary/90 transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              Заказать расчёт
-            </a>
-          </div>
+
+          {/* О НАС в мобильном меню */}
+          <button
+            onClick={() => setMobileAboutOpen((v) => !v)}
+            className="flex items-center justify-between py-2 text-sm font-medium text-primary/60 hover:text-primary transition-colors"
+          >
+            О НАС
+            <Icon
+              name="ChevronDown"
+              size={14}
+              className={`transition-transform duration-200 ${mobileAboutOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          {mobileAboutOpen && (
+            <div className="rounded-xl border border-border overflow-hidden mb-1">
+              <div className="px-4 py-3 border-b border-border bg-background">
+                <p className="text-xs font-semibold text-foreground">Точность. Надёжность. Качество.</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                  Оптоволоконный лазер 30 Вт — маркировка врезается в материал и остаётся навсегда.
+                </p>
+              </div>
+              {aboutItems.map((item) => (
+                <div key={item.title} className="flex items-start gap-3 px-4 py-2.5 border-b last:border-0 border-border bg-background">
+                  <Icon name={item.icon as Parameters<typeof Icon>[0]["name"]} size={13} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs font-semibold text-foreground">{item.title}</p>
+                    <p className="text-xs text-muted-foreground">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </header>
