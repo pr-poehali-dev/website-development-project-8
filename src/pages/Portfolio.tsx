@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
+import Header from "@/components/Header";
 
 const items = [
   { src: "https://cdn.poehali.dev/files/09a1225c-196e-4a02-baf8-3af34e48ea79.png", alt: "Брелок с логотипом BMW", title: "Премиум брелоки", desc: "Металлические брелоки с корпоративной символикой" },
@@ -38,12 +39,9 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className="py-14 md:py-24 bg-card">
+      <Header />
+      <section className="pt-20 md:pt-28 pb-14 md:pb-24 bg-card">
         <div className="container mx-auto px-4">
-          <Button variant="outline" className="mb-6 md:mb-8" onClick={() => navigate("/")}>
-            <Icon name="ArrowLeft" className="mr-2" size={20} />
-            Назад на главную
-          </Button>
 
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-6xl mb-4 md:mb-6">

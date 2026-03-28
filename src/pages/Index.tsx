@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Header from "@/components/Header";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -23,7 +24,8 @@ const Index = () => {
   
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <Header />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 md:pt-16">
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -380,73 +382,6 @@ const Index = () => {
                 Смотреть Портфолио
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14 md:py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-4 text-foreground">
-              Контакты
-            </h2>
-            <p className="text-base md:text-xl text-muted-foreground">
-              Свяжитесь с нами удобным для вас способом
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
-            <Card className="p-5 md:p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="flex justify-center mb-3 md:mb-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Icon name="Phone" size={24} className="text-primary" />
-                </div>
-              </div>
-              <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3">Телефон</h3>
-              <a href="tel:+79217114353" className="text-muted-foreground hover:text-primary transition-colors">
-                +7 921 711-43-53
-              </a>
-            </Card>
-
-            <Card className="p-5 md:p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="flex justify-center mb-3 md:mb-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img
-                    src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/640062df-fa08-4f48-85a8-94d3426300fa.png"
-                    alt="Max"
-                    className="w-6 h-6 md:w-8 md:h-8"
-                  />
-                </div>
-              </div>
-              <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3">Max</h3>
-              <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">
-                @LaserDesign
-              </a>
-            </Card>
-
-            <Card className="p-5 md:p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="flex justify-center mb-3 md:mb-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Icon name="Mail" size={24} className="text-primary" />
-                </div>
-              </div>
-              <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3">E-mail</h3>
-              <a href="mailto:laserdesign39@yandex.ru" className="text-muted-foreground hover:text-primary transition-colors break-all text-xs md:text-sm">
-                laserdesign39@yandex.ru
-              </a>
-            </Card>
-
-            <Card className="p-5 md:p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="flex justify-center mb-3 md:mb-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Icon name="Instagram" size={24} className="text-primary" />
-                </div>
-              </div>
-              <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3">Instagram</h3>
-              <a href="https://www.instagram.com/laserdesign_39/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                @laserdesign_39
-              </a>
-            </Card>
           </div>
         </div>
       </section>
