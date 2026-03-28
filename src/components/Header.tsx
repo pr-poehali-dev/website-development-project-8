@@ -10,16 +10,10 @@ const contacts = [
     external: false,
   },
   {
-    href: "https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM",
-    icon: (
-      <img
-        src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/640062df-fa08-4f48-85a8-94d3426300fa.png"
-        alt="Max"
-        className="w-3.5 h-3.5"
-      />
-    ),
-    label: "Max — @LaserDesign",
-    external: true,
+    href: "mailto:laserdesign39@yandex.ru",
+    icon: <Icon name="Mail" size={13} className="text-primary" />,
+    label: "laserdesign39@yandex.ru",
+    external: false,
   },
   {
     href: "https://www.instagram.com/laserdesign_39/",
