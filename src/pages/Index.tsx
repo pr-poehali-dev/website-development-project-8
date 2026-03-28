@@ -454,13 +454,6 @@ const Index = () => {
       <footer className="py-8 bg-background border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-3">
-            <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
-              <Icon name="Users" size={15} className="text-primary/60" />
-              <span>Посетителей сайта:</span>
-              <span className="text-primary font-semibold tabular-nums">
-                {visitCount.toLocaleString("ru-RU")}
-              </span>
-            </div>
             <p className="text-muted-foreground text-sm">
               © 2024 LaserDesign. Все права защищены.
             </p>
