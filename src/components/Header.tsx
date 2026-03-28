@@ -54,7 +54,7 @@ const Header = () => {
   const navLink = (path: string, label: string) => (
     <button
       onClick={() => { navigate(path); setMobileOpen(false); }}
-      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+      className={`px-5 py-2 rounded-md text-[1.3rem] font-medium transition-colors ${
         location.pathname === path
           ? "text-primary"
           : "text-primary/60 hover:text-primary"
