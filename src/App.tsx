@@ -16,7 +16,7 @@ const FloatingOrderButton = () => (
     href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
     target="_blank"
     rel="noopener noreferrer"
-    className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full shadow-lg text-sm font-semibold active:scale-95 transition-transform"
+    className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full shadow-lg text-sm font-semibold active:scale-95 transition-transform whitespace-nowrap"
   >
     <img
       src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/59c821b6-54a1-4b83-b1f9-483cfbde17e0.png"

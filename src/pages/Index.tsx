@@ -120,13 +120,13 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
             <Card className="p-5 md:p-8 bg-card border-border hover:border-primary transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-center">
                 <div className="inline-flex p-3 md:p-4 rounded-full bg-primary/10 mb-4 md:mb-6">
                   <Icon name="Crosshair" className="text-primary" size={32} />
                 </div>
-                <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4">Непревзойденная Точность</h3>
+                <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Непревзойденная Точность</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Премиальное волоконное лазерное оборудование. Точность до 5 микрон (0,005 мм). 
                   Гарантируем безупречную детализацию.
@@ -139,7 +139,7 @@ const Index = () => {
                 <div className="inline-flex p-3 md:p-4 rounded-full bg-primary/10 mb-4 md:mb-6">
                   <Icon name="Award" className="text-primary" size={32} />
                 </div>
-                <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4">Материалы VIP-класса</h3>
+                <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Материалы VIP-класса</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Работаем с драгоценными, легированными и сложными металлами. Контроль качества на каждом этапе.
                 </p>
@@ -151,7 +151,7 @@ const Index = () => {
                 <div className="inline-flex p-3 md:p-4 rounded-full bg-primary/10 mb-4 md:mb-6">
                   <Icon name="Palette" className="text-primary" size={32} />
                 </div>
-                <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4">Персональная Разработка</h3>
+                <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Персональная Разработка</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Каждый VIP-сувенир — уникальный проект. Эксклюзивный макет с учетом всех нюансов металла и формы.
                 </p>
@@ -163,7 +163,7 @@ const Index = () => {
                 <div className="inline-flex p-3 md:p-4 rounded-full bg-primary/10 mb-4 md:mb-6">
                   <Icon name="Clock" className="text-primary" size={32} />
                 </div>
-                <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4">Соблюдение Сроков</h3>
+                <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Соблюдение Сроков</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Ценим ваше время. Четкие этапы работы и строгий тайминг позволяют выполнять заказы точно в срок.
                 </p>
@@ -386,7 +386,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-background border-t border-border">
+      <footer className="py-8 pb-24 md:pb-8 bg-background border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-3">
             <p className="text-muted-foreground text-sm">

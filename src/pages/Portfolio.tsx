@@ -40,7 +40,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <section className="pt-20 md:pt-28 pb-14 md:pb-24 bg-card">
+      <section className="pt-20 md:pt-28 pb-24 md:pb-24 bg-card">
         <div className="container mx-auto px-4">
 
           <div className="text-center mb-8 md:mb-16">
@@ -52,7 +52,7 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
             {items.map((item, i) => (
               <div
                 key={i}
@@ -62,7 +62,7 @@ const Portfolio = () => {
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-44 sm:h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-56 sm:h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-3 md:p-6">
                   <div>
@@ -102,20 +102,20 @@ const Portfolio = () => {
           onClick={() => setLightbox(null)}
         >
           <button
-            className="absolute top-3 right-3 md:top-4 md:right-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors z-10"
+            className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
             onClick={() => setLightbox(null)}
           >
             <Icon name="X" size={20} />
           </button>
 
           <button
-            className="absolute left-2 md:left-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 md:p-3 transition-colors z-10"
+            className="absolute left-3 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
             onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + items.length) % items.length); }}
           >
             <Icon name="ChevronLeft" size={24} />
           </button>
 
-          <div className="flex flex-col items-center max-w-4xl mx-auto px-12 md:px-16" onClick={(e) => e.stopPropagation()}>
+          <div className="flex flex-col items-center max-w-4xl mx-auto px-4 sm:px-8 md:px-16" onClick={(e) => e.stopPropagation()}>
             <img
               src={items[lightbox].src}
               alt={items[lightbox].alt}
@@ -129,7 +129,7 @@ const Portfolio = () => {
           </div>
 
           <button
-            className="absolute right-2 md:right-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 md:p-3 transition-colors z-10"
+            className="absolute right-3 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
             onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % items.length); }}
           >
             <Icon name="ChevronRight" size={24} />

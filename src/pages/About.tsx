@@ -28,7 +28,7 @@ const About = () => (
   <div className="min-h-screen bg-background text-foreground">
     <Header />
 
-    <section className="pt-24 md:pt-32 pb-16 md:pb-24">
+    <section className="pt-24 md:pt-32 pb-24 md:pb-24">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="mb-10 md:mb-16">
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">О нашей мастерской лазерной маркировки</p>
@@ -74,7 +74,7 @@ const About = () => (
             href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
+            className="w-full sm:w-auto shrink-0 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
           >
             Заказать расчёт
           </a>
