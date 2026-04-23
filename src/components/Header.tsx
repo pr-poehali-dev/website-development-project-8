@@ -49,10 +49,12 @@ const Header = () => {
           </nav>
 
           {/* Десктоп контакты */}
-          <div className="hidden md:flex items-center gap-4 text-sm text-primary/60">
-            <span className="font-medium text-primary/80">КОНТАКТЫ</span>
-            <a href="tel:+79097764353" className="hover:text-primary transition-colors">+7 909 776-43-53</a>
-            <a href="mailto:laserdesign39@yandex.ru" className="hover:text-primary transition-colors">laserdesign39@yandex.ru</a>
+          <div className="hidden md:flex items-center gap-3">
+            <span className="px-5 py-2 text-[1.3rem] font-medium text-primary/60">КОНТАКТЫ</span>
+            <div className="flex flex-col items-end text-sm text-primary/60">
+              <a href="tel:+79097764353" className="hover:text-primary transition-colors">+7 909 776-43-53</a>
+              <a href="mailto:laserdesign39@yandex.ru" className="hover:text-primary transition-colors">laserdesign39@yandex.ru</a>
+            </div>
           </div>
 
           {/* Мобильная правая часть */}
