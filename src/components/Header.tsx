@@ -48,6 +48,13 @@ const Header = () => {
             {navLink("/about", "О НАС")}
           </nav>
 
+          {/* Десктоп контакты */}
+          <div className="hidden md:flex items-center gap-4 text-sm text-primary/60">
+            <span className="font-medium text-primary/80">КОНТАКТЫ</span>
+            <a href="tel:+79097764353" className="hover:text-primary transition-colors">+7 909 776-43-53</a>
+            <a href="mailto:laserdesign39@yandex.ru" className="hover:text-primary transition-colors">laserdesign39@yandex.ru</a>
+          </div>
+
           {/* Мобильная правая часть */}
           <div className="flex md:hidden items-center gap-2">
             <button
