@@ -14,7 +14,7 @@ const Header = () => {
   const navLink = (path: string, label: string) => (
     <button
       onClick={() => { navigate(path); setMobileOpen(false); }}
-      className={`px-5 py-2 rounded-md text-[1.3rem] font-medium transition-colors ${
+      className={`px-5 py-2 rounded-md text-sm md:text-[1.3rem] font-medium transition-colors ${
         location.pathname === path
           ? "text-primary"
           : "text-primary/60 hover:text-primary"
@@ -75,6 +75,11 @@ const Header = () => {
           {navLink("/", "ГЛАВНАЯ")}
           {navLink("/portfolio", "ПОРТФОЛИО")}
           {navLink("/about", "О НАС")}
+          <div className="border-t border-border mt-2 pt-3 px-5 flex flex-col gap-1.5">
+            <p className="text-xs font-medium text-primary/40 uppercase tracking-widest mb-1">Контакты</p>
+            <a href="tel:+79097764353" className="text-sm text-primary/70 hover:text-primary transition-colors">+7 909 776-43-53</a>
+            <a href="mailto:laserdesign39@yandex.ru" className="text-sm text-primary/70 hover:text-primary transition-colors">laserdesign39@yandex.ru</a>
+          </div>
         </div>
       )}
     </header>
