@@ -77,8 +77,14 @@ const Header = () => {
           {navLink("/about", "О НАС")}
           <div className="border-t border-border mt-2 pt-3 px-5 flex flex-col gap-1.5">
             <p className="text-xs font-medium text-primary/40 uppercase tracking-widest mb-1">Контакты</p>
-            <a href="tel:+79097764353" className="text-sm text-primary/70 hover:text-primary transition-colors">+7 909 776-43-53</a>
-            <a href="mailto:laserdesign39@yandex.ru" className="text-sm text-primary/70 hover:text-primary transition-colors">laserdesign39@yandex.ru</a>
+            <a href="tel:+79097764353" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+              <Icon name="Phone" size={14} />
+              +7 909 776-43-53
+            </a>
+            <a href="mailto:laserdesign39@yandex.ru" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+              <Icon name="Mail" size={14} />
+              laserdesign39@yandex.ru
+            </a>
           </div>
         </div>
       )}
