@@ -1,11 +1,21 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
+import { cmsGetContent } from "@/lib/cms";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [phone, setPhone] = useState("+7 909 776-43-53");
+  const [email, setEmail] = useState("laserdesign39@yandex.ru");
+
+  useEffect(() => {
+    cmsGetContent().then((d) => {
+      if (d.contacts_phone) setPhone(d.contacts_phone);
+      if (d.contacts_email) setEmail(d.contacts_email);
+    });
+  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -52,13 +62,13 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-3">
             <span className="px-5 py-2 text-[1.3rem] font-medium text-primary/60">КОНТАКТЫ</span>
             <div className="flex flex-col items-end gap-1 text-sm text-primary/60">
-              <a href="tel:+79097764353" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <a href={`tel:${phone.replace(/\D/g, "").replace(/^8/, "+7")}`} className="flex items-center gap-1.5 hover:text-primary transition-colors">
                 <Icon name="Phone" size={13} />
-                +7 909 776-43-53
+                {phone}
               </a>
-              <a href="mailto:laserdesign39@yandex.ru" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-primary transition-colors">
                 <Icon name="Mail" size={13} />
-                laserdesign39@yandex.ru
+                {email}
               </a>
             </div>
           </div>
@@ -83,13 +93,13 @@ const Header = () => {
           {navLink("/about", "О НАС")}
           <div className="border-t border-border mt-2 pt-3 px-5 flex flex-col gap-1.5">
             <p className="text-xs font-medium text-primary/40 uppercase tracking-widest mb-1">Контакты</p>
-            <a href="tel:+79097764353" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+            <a href={`tel:${phone.replace(/\D/g, "").replace(/^8/, "+7")}`} className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
               <Icon name="Phone" size={14} />
-              +7 909 776-43-53
+              {phone}
             </a>
-            <a href="mailto:laserdesign39@yandex.ru" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+            <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
               <Icon name="Mail" size={14} />
-              laserdesign39@yandex.ru
+              {email}
             </a>
           </div>
         </div>

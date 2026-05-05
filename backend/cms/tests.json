@@ -1,0 +1,27 @@
+{
+  "tests": [
+    {
+      "name": "GET /content - публичный контент",
+      "method": "GET",
+      "path": "/?action=content",
+      "expectedStatus": 200,
+      "expectedBody": {"hero_title": "string"},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "GET /gallery - публичная галерея",
+      "method": "GET",
+      "path": "/?action=gallery",
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST /login - неверный пароль",
+      "method": "POST",
+      "path": "/?action=login",
+      "body": {"password": "wrongpassword"},
+      "expectedStatus": 401,
+      "expectedBody": {"ok": false},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

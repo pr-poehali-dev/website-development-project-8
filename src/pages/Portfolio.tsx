@@ -3,28 +3,18 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
-
-const items = [
-  { src: "https://cdn.poehali.dev/files/09a1225c-196e-4a02-baf8-3af34e48ea79.png", alt: "Брелок с логотипом BMW", title: "Премиум брелоки", desc: "Металлические брелоки с корпоративной символикой" },
-  { src: "https://cdn.poehali.dev/files/fb10245e-cbb2-4151-a89f-5d3f7dda2dcf.JPG", alt: "Технические шильдики", title: "Технические таблички", desc: "Шильдики с VIN-номерами и техническими данными" },
-  { src: "https://cdn.poehali.dev/files/f07e09e4-132c-41f1-8fa1-14f720a7eb22.png", alt: "Гравировка на камне", title: "Гравировка на камне", desc: "Художественная гравировка на натуральных материалах" },
-  { src: "https://cdn.poehali.dev/files/3e7289b1-1a60-45d4-b257-b70bf7c0aa31.JPG", alt: "Портреты на металле", title: "Художественные портреты", desc: "Фотореалистичные портреты на металлических пластинах" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/09cc1db6-e0d1-4b3b-be90-e912300e8891.jpg", alt: "Корпоративные VIP-сувениры", title: "Корпоративный VIP", desc: "Элитные наборы с ювелирной гравировкой логотипа" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/2f689d2c-2df6-49fd-8408-5a41c2e90d50.jpg", alt: "Памятные подарки", title: "Памятные подарки", desc: "Зажигалки и аксессуары с личной гравировкой" },
-  { src: "https://cdn.poehali.dev/files/66466256-19a5-4c2a-b6ff-f5238d500d4e.png", alt: "Брелок Alfa Romeo", title: "Автомобильные брелоки", desc: "Эксклюзивные брелоки с логотипами автобрендов" },
-  { src: "https://cdn.poehali.dev/files/1a3f3f9f-482f-4496-8a8b-c8be1d839cbe.png", alt: "Шильдик BMW M", title: "Именные шильдики", desc: "Персонализированные таблички с логотипами" },
-  { src: "https://cdn.poehali.dev/files/dfaab186-b4e5-4186-bb98-81319bc33251.JPG", alt: "Гравировка на бутылке водки", title: "Подарочные бутылки", desc: "Персональная гравировка на металлических ёмкостях" },
-  { src: "https://cdn.poehali.dev/files/5aea554c-9cc2-4280-8e41-a9cdc3c03858.JPG", alt: "Гравировка на ноже", title: "Гравировка на инструментах", desc: "Персонализация ножей и других изделий" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/4aae7efe-bd32-4414-b93b-3d472262a29f.JPG", alt: "Гравировка на кожаных изделиях", title: "Гравировка на кожаных изделиях", desc: "Персонализация кошельков, обложек и кожаных аксессуаров" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/318bfa15-5f1c-40ef-bea5-74648240283b.JPG", alt: "Адресник для питомца", title: "Адресники для питомцев", desc: "Именные жетоны с гравировкой для кошек и собак" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/bf47f743-c606-4cec-86a6-34e73c9e0e7a.JPG", alt: "Гравировка на ручке", title: "Именные ручки", desc: "Гравировка имён и инициалов на фирменных ручках" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/6fca8fd2-8251-46ff-bc6a-1b635ecec22a.JPG", alt: "Подарочная табличка", title: "Подарочные таблички", desc: "Латунные пластины с персональными надписями для подарков" },
-  { src: "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/7ae9c76c-2ea5-45b3-b944-3f20f4dd0ebc.JPG", alt: "Художественная гравировка на термосе", title: "Гравировка на термосе", desc: "Художественная иллюстрация на металлическом термосе" },
-];
+import { cmsGetContent, cmsGetGallery, type GalleryItem, type CmsContent } from "@/lib/cms";
 
 const Portfolio = () => {
   const navigate = useNavigate();
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [items, setItems] = useState<GalleryItem[]>([]);
+  const [content, setContent] = useState<Pick<CmsContent, "portfolio_title" | "portfolio_subtitle"> | null>(null);
+
+  useEffect(() => {
+    cmsGetGallery().then(setItems);
+    cmsGetContent().then((d) => setContent({ portfolio_title: d.portfolio_title, portfolio_subtitle: d.portfolio_subtitle }));
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -35,7 +25,7 @@ const Portfolio = () => {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [lightbox]);
+  }, [lightbox, items.length]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -45,17 +35,17 @@ const Portfolio = () => {
 
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-6xl mb-4 md:mb-6">
-              Наше <span className="text-primary">Портфолио</span>
+              {content?.portfolio_title ?? "Наше"} <span className="text-primary">Портфолио</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Примеры наших работ — от корпоративных сувениров до художественных портретов
+              {content?.portfolio_subtitle ?? "Примеры наших работ — от корпоративных сувениров до художественных портретов"}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
             {items.map((item, i) => (
               <div
-                key={i}
+                key={item.id}
                 className="group relative overflow-hidden rounded-lg cursor-pointer"
                 onClick={() => setLightbox(i)}
               >
@@ -96,7 +86,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {lightbox !== null && (
+      {lightbox !== null && items[lightbox] && (
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setLightbox(null)}
