@@ -70,7 +70,7 @@ const Header = () => {
                 <Icon name="Send" size={13} />
                 @laserdesign_39
               </a>
-              <a href="maxapp://user/laserdesign_39" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <a href="https://max.ru/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
                 <Icon name="MessageCircle" size={13} />
                 @laserdesign_39
               </a>
@@ -105,7 +105,7 @@ const Header = () => {
               <Icon name="Send" size={14} />
               Telegram: @laserdesign_39
             </a>
-            <a href="maxapp://user/laserdesign_39" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+            <a href="https://max.ru/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
               <Icon name="MessageCircle" size={14} />
               MAX: @laserdesign_39
             </a>
