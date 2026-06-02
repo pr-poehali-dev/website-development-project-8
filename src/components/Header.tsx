@@ -66,9 +66,13 @@ const Header = () => {
                 <Icon name="Phone" size={13} />
                 {phone}
               </a>
-              <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                <Icon name="Mail" size={13} />
-                {email}
+              <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                <Icon name="Send" size={13} />
+                @laserdesign_39
+              </a>
+              <a href="https://max.ru/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                <Icon name="MessageCircle" size={13} />
+                @laserdesign_39
               </a>
             </div>
           </div>
@@ -97,9 +101,13 @@ const Header = () => {
               <Icon name="Phone" size={14} />
               {phone}
             </a>
-            <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
-              <Icon name="Mail" size={14} />
-              {email}
+            <a href="https://t.me/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+              <Icon name="Send" size={14} />
+              Telegram: @laserdesign_39
+            </a>
+            <a href="https://max.ru/laserdesign_39" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors">
+              <Icon name="MessageCircle" size={14} />
+              MAX: @laserdesign_39
             </a>
           </div>
         </div>
