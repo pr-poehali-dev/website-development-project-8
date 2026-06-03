@@ -15,7 +15,10 @@ import {
   type GalleryItem,
 } from "@/lib/cms";
 
-type Tab = "texts" | "gallery";
+type Tab = "texts" | "gallery" | "stats";
+
+interface DayStat { date: string; visits: number; }
+interface StatsData { stats: DayStat[]; total: number; }
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -29,6 +32,8 @@ const Admin = () => {
   const [uploading, setUploading] = useState<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [addingPhoto, setAddingPhoto] = useState(false);
+  const [statsData, setStatsData] = useState<StatsData | null>(null);
+  const [statsLoading, setStatsLoading] = useState(false);
 
   useEffect(() => {
     if (!token) { navigate("/admin/login"); return; }
@@ -78,6 +83,18 @@ const Admin = () => {
     };
     setGallery((prev) => [...prev, newItem]);
     setAddingPhoto(false);
+  };
+
+  const loadStats = async () => {
+    setStatsLoading(true);
+    const VISITORS_URL = "https://functions.poehali.dev/b94632d3-210d-4f2f-8dfd-08440d692d0d";
+    const res = await fetch(`${VISITORS_URL}?action=stats`, {
+      headers: { "X-Auth-Token": token },
+    });
+    const raw = await res.json();
+    const data: StatsData = typeof raw === "string" ? JSON.parse(raw) : raw;
+    setStatsData(data);
+    setStatsLoading(false);
   };
 
   const handleDeletePhoto = (index: number) => {
@@ -150,6 +167,14 @@ const Admin = () => {
             <Icon name="Image" size={16} className="mr-2" />
             Фотографии работ
           </Button>
+          <Button
+            variant={tab === "stats" ? "default" : "outline"}
+            onClick={() => { setTab("stats"); if (!statsData) loadStats(); }}
+            size="sm"
+          >
+            <Icon name="BarChart2" size={16} className="mr-2" />
+            Статистика
+          </Button>
         </div>
 
         {tab === "texts" && (
@@ -181,6 +206,65 @@ const Admin = () => {
                 <><Icon name="Save" size={16} className="mr-2" />Сохранить тексты</>
               )}
             </Button>
+          </div>
+        )}
+
+        {tab === "stats" && (
+          <div className="flex flex-col gap-4">
+            {statsLoading && (
+              <div className="flex items-center justify-center py-12 text-muted-foreground gap-2">
+                <Icon name="Loader" size={20} className="animate-spin" />
+                Загрузка...
+              </div>
+            )}
+            {statsData && !statsLoading && (
+              <>
+                <div className="grid grid-cols-2 gap-3">
+                  <Card className="p-4 bg-card border-border text-center">
+                    <p className="text-3xl font-bold text-primary">{statsData.total.toLocaleString("ru-RU")}</p>
+                    <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">Всего посетителей</p>
+                  </Card>
+                  <Card className="p-4 bg-card border-border text-center">
+                    <p className="text-3xl font-bold text-primary">
+                      {statsData.stats.length > 0 ? statsData.stats[statsData.stats.length - 1].visits : 0}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">Сегодня</p>
+                  </Card>
+                </div>
+
+                <Card className="p-4 bg-card border-border">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">Посещения за 30 дней</p>
+                  {statsData.stats.length === 0 ? (
+                    <p className="text-muted-foreground text-sm text-center py-4">Нет данных</p>
+                  ) : (
+                    <div className="flex flex-col gap-2">
+                      {(() => {
+                        const max = Math.max(...statsData.stats.map((d) => d.visits));
+                        return statsData.stats.map((d) => (
+                          <div key={d.date} className="flex items-center gap-3">
+                            <span className="text-xs text-muted-foreground w-24 shrink-0">
+                              {new Date(d.date).toLocaleDateString("ru-RU", { day: "numeric", month: "short" })}
+                            </span>
+                            <div className="flex-1 bg-muted rounded-full h-2 overflow-hidden">
+                              <div
+                                className="h-2 bg-primary rounded-full transition-all"
+                                style={{ width: `${Math.max((d.visits / max) * 100, 4)}%` }}
+                              />
+                            </div>
+                            <span className="text-xs font-medium w-6 text-right">{d.visits}</span>
+                          </div>
+                        ));
+                      })()}
+                    </div>
+                  )}
+                </Card>
+
+                <Button variant="outline" size="sm" className="self-start" onClick={loadStats}>
+                  <Icon name="RefreshCw" size={14} className="mr-2" />
+                  Обновить
+                </Button>
+              </>
+            )}
           </div>
         )}
 

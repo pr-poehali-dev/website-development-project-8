@@ -12,5 +12,11 @@
       "path": "/",
       "expectedStatus": 200
     }
+    ,{
+      "name": "GET stats unauthorized",
+      "method": "GET",
+      "path": "/?action=stats",
+      "expectedStatus": 401
+    }
   ]
 }
