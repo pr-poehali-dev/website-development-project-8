@@ -7,19 +7,17 @@ import Header from "@/components/Header";
 
 const Index = () => {
   const navigate = useNavigate();
-  const [visitCount, setVisitCount] = useState<number>(0);
+  const [visitCount, setVisitCount] = useState<number | null>(null);
 
   useEffect(() => {
-    const key = "ld_visit_count";
-    const visitorKey = "ld_visitor_id";
-    let count = parseInt(localStorage.getItem(key) || "0", 10);
-    const isNew = !localStorage.getItem(visitorKey);
-    if (isNew) {
-      count += 1;
-      localStorage.setItem(visitorKey, "1");
-      localStorage.setItem(key, String(count));
-    }
-    setVisitCount(count);
+    const VISITORS_URL = "https://functions.poehali.dev/b94632d3-210d-4f2f-8dfd-08440d692d0d";
+    const visited = sessionStorage.getItem("ld_visited");
+    const method = visited ? "GET" : "POST";
+    if (!visited) sessionStorage.setItem("ld_visited", "1");
+    fetch(VISITORS_URL, { method })
+      .then((r) => r.json())
+      .then((d) => setVisitCount(typeof d === "object" ? d.count : JSON.parse(d).count))
+      .catch(() => {});
   }, []);
   
   return (
@@ -392,6 +390,12 @@ const Index = () => {
             <p className="text-muted-foreground text-sm">
               © 2024 LaserDesign. Все права защищены.
             </p>
+            {visitCount !== null && (
+              <p className="text-muted-foreground/50 text-xs flex items-center justify-center gap-1.5">
+                <Icon name="Eye" size={12} />
+                Посетителей: {visitCount.toLocaleString("ru-RU")}
+              </p>
+            )}
           </div>
         </div>
       </footer>
