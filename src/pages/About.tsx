@@ -39,7 +39,8 @@ const About = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
 
-      <section className="pt-24 md:pt-32 pb-24 md:pb-24">
+      <main>
+      <section aria-label="О нас" className="pt-24 md:pt-32 pb-24 md:pb-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="mb-10 md:mb-16">
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
@@ -61,7 +62,7 @@ const About = () => {
                   key={item.title}
                   className="flex items-start gap-4 p-5 rounded-xl border border-border bg-card hover:border-primary/50 transition-colors"
                 >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0 mt-0.5">
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0 mt-0.5" aria-hidden="true">
                     <Icon name={item.icon as Parameters<typeof Icon>[0]["name"]} size={18} className="text-primary" />
                   </div>
                   <div>
@@ -92,6 +93,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      </main>
     </div>
   );
 };

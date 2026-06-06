@@ -30,7 +30,8 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <section className="pt-20 md:pt-28 pb-24 md:pb-24 bg-card">
+      <main>
+      <section aria-label="Портфолио работ" className="pt-20 md:pt-28 pb-24 md:pb-24 bg-card">
         <div className="container mx-auto px-4">
 
           <div className="text-center mb-8 md:mb-16">
@@ -44,28 +45,29 @@ const Portfolio = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-7xl mx-auto">
             {items.map((item, i) => (
-              <div
+              <button
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg cursor-pointer"
+                className="group relative overflow-hidden rounded-lg cursor-pointer text-left w-full"
                 onClick={() => setLightbox(i)}
+                aria-label={`Открыть фото: ${item.title}`}
               >
                 <img
                   src={item.src}
                   alt={item.alt}
                   className="w-full h-56 sm:h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-3 md:p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-3 md:p-6" aria-hidden="true">
                   <div>
                     <h3 className="text-sm sm:text-lg md:text-2xl font-semibold mb-1 md:mb-2">{item.title}</h3>
                     <p className="text-muted-foreground text-xs sm:text-sm hidden sm:block">{item.desc}</p>
                   </div>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
                   <div className="bg-background/60 rounded-full p-2 md:p-3">
                     <Icon name="ZoomIn" size={22} className="text-white" />
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
 
@@ -86,23 +88,29 @@ const Portfolio = () => {
         </div>
       </section>
 
+      </main>
       {lightbox !== null && items[lightbox] && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Просмотр фото: ${items[lightbox].title}`}
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setLightbox(null)}
         >
           <button
+            aria-label="Закрыть просмотр"
             className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
             onClick={() => setLightbox(null)}
           >
-            <Icon name="X" size={20} />
+            <Icon name="X" size={20} aria-hidden="true" />
           </button>
 
           <button
+            aria-label="Предыдущее фото"
             className="absolute left-3 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
             onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + items.length) % items.length); }}
           >
-            <Icon name="ChevronLeft" size={24} />
+            <Icon name="ChevronLeft" size={24} aria-hidden="true" />
           </button>
 
           <div className="flex flex-col items-center max-w-4xl mx-auto px-4 sm:px-8 md:px-16" onClick={(e) => e.stopPropagation()}>
@@ -114,15 +122,16 @@ const Portfolio = () => {
             <div className="mt-3 md:mt-4 text-center">
               <h3 className="text-base md:text-xl font-semibold text-white">{items[lightbox].title}</h3>
               <p className="text-white/60 mt-1 text-sm">{items[lightbox].desc}</p>
-              <p className="text-white/30 text-xs md:text-sm mt-2">{lightbox + 1} / {items.length}</p>
+              <p className="text-white/30 text-xs md:text-sm mt-2" aria-label={`Фото ${lightbox + 1} из ${items.length}`}>{lightbox + 1} / {items.length}</p>
             </div>
           </div>
 
           <button
+            aria-label="Следующее фото"
             className="absolute right-3 text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
             onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % items.length); }}
           >
-            <Icon name="ChevronRight" size={24} />
+            <Icon name="ChevronRight" size={24} aria-hidden="true" />
           </button>
         </div>
       )}

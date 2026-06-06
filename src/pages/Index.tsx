@@ -55,12 +55,12 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
           <Icon name="ChevronDown" className="text-primary" size={32} />
         </div>
       </section>
 
-      <section className="py-14 md:py-24 bg-card">
+      <section aria-label="О команде" className="py-14 md:py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-10 md:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 md:mb-6">
@@ -107,7 +107,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-14 md:py-24 bg-background">
+      <section aria-label="Наши преимущества" className="py-14 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 md:mb-6">
@@ -171,7 +171,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-14 md:py-24 bg-card">
+      <section aria-label="Эксклюзивные сувениры" className="py-14 md:py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 md:mb-6">
@@ -191,7 +191,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-14 md:py-24 bg-background">
+      <section aria-label="Отзывы клиентов" className="py-14 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 md:mb-6">
@@ -203,155 +203,42 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
-            <Card className="p-5 md:p-8 bg-card border-border">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-              </div>
-              <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                "Заказывали корпоративные подарки для партнеров. Дизайнеры создали невероятные макеты — 
-                каждая деталь проработана идеально. Качество гравировки премиальное, а цены приятно удивили. 
-                При таком уровне работы ожидали гораздо дороже!"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name="User" className="text-primary" size={20} />
+            {[
+              { name: "Александр М.", role: "Директор компании", text: "Заказывали корпоративные подарки для партнеров. Дизайнеры создали невероятные макеты — каждая деталь проработана идеально. Качество гравировки премиальное, а цены приятно удивили. При таком уровне работы ожидали гораздо дороже!" },
+              { name: "Дмитрий К.", role: "Владелец автосервиса", text: "Нужно было срочно изготовить технические шильдики с VIN-номерами. Сделали за 3 дня вместо обещанной недели! Качество высочайшее, всё читается идеально. Цены демократичные, очень доволен скоростью и профессионализмом." },
+              { name: "Елена В.", role: "Частный заказчик", text: "Заказывала портреты на металле в подарок родителям. Дизайнер виртуозно обработал фотографии — детализация потрясающая! Сделали за неделю точно в срок. Выглядит очень дорого, а стоимость вполне доступная. Великолепная работа!" },
+              { name: "Александр М.", role: "Директор компании", text: "Заказывал корпоративные подарки для партнёров — визитницы с логотипом компании. Маркировка выполнена безупречно, каждая деталь проработана. Партнёры в восторге от качества! Теперь обращаюсь только сюда для всех представительских сувениров." },
+              { name: "Ирина С.", role: "Организатор мероприятий", text: "Сделали памятные медали для спортивного турнира. Работа выполнена быстро и качественно, дизайн согласовали за день. Участники довольны, медали выглядят статусно и солидно. Рекомендую для организации мероприятий!" },
+              { name: "Сергей П.", role: "Представитель IT-компании", text: "Заказывал таблички с QR-кодами для выставочного стенда. Всё выполнено идеально — коды читаются без проблем, металл качественный, смотрится современно и технологично. Отличное решение для бизнеса, спасибо за оперативность!" },
+            ].map((review, i) => (
+              <Card key={i} className="p-5 md:p-8 bg-card border-border">
+                <div className="flex items-center gap-2 mb-4" aria-label="Оценка: 5 из 5 звёзд" role="img">
+                  {[...Array(5)].map((_, s) => (
+                    <Icon key={s} name="Star" className="text-primary fill-primary" size={20} aria-hidden="true" />
+                  ))}
                 </div>
-                <div>
-                  <p className="font-semibold text-sm md:text-base">Александр М.</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Директор компании</p>
+                <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center" aria-hidden="true">
+                    <Icon name="User" className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm md:text-base">{review.name}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">{review.role}</p>
+                  </div>
                 </div>
-              </div>
-            </Card>
-
-            <Card className="p-5 md:p-8 bg-card border-border">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-              </div>
-              <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                "Нужно было срочно изготовить технические шильдики с VIN-номерами. Сделали за 3 дня вместо обещанной недели! 
-                Качество высочайшее, всё читается идеально. Цены демократичные, очень доволен скоростью и профессионализмом."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name="User" className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm md:text-base">Дмитрий К.</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Владелец автосервиса</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-5 md:p-8 bg-card border-border">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-              </div>
-              <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                "Заказывала портреты на металле в подарок родителям. Дизайнер виртуозно обработал фотографии — 
-                детализация потрясающая! Сделали за неделю точно в срок. Выглядит очень дорого, а стоимость вполне доступная. 
-                Великолепная работа!"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name="User" className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm md:text-base">Елена В.</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Частный заказчик</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-5 md:p-8 bg-card border-border">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-              </div>
-              <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                "Заказывал корпоративные подарки для партнёров — визитницы с логотипом компании. 
-                Маркировка выполнена безупречно, каждая деталь проработана. Партнёры в восторге от качества! 
-                Теперь обращаюсь только сюда для всех представительских сувениров."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name="User" className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm md:text-base">Александр М.</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Директор компании</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-5 md:p-8 bg-card border-border">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-              </div>
-              <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                "Сделали памятные медали для спортивного турнира. Работа выполнена быстро и качественно, 
-                дизайн согласовали за день. Участники довольны, медали выглядят статусно и солидно. 
-                Рекомендую для организации мероприятий!"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name="User" className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm md:text-base">Ирина С.</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Организатор мероприятий</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-5 md:p-8 bg-card border-border">
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-                <Icon name="Star" className="text-primary fill-primary" size={20} />
-              </div>
-              <p className="text-muted-foreground mb-5 md:mb-6 leading-relaxed text-sm md:text-base">
-                "Заказывал таблички с QR-кодами для выставочного стенда. Всё выполнено идеально — 
-                коды читаются без проблем, металл качественный, смотрится современно и технологично. 
-                Отличное решение для бизнеса, спасибо за оперативность!"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name="User" className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm md:text-base">Сергей П.</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Представитель IT-компании</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-32 bg-background relative overflow-hidden">
+      <section aria-label="Обратная связь" className="py-16 md:py-32 bg-background relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-5"
+          aria-hidden="true"
           style={{
             backgroundImage: `url('https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/7a792eb1-5dff-4dc4-9649-d7e1393cebd6.jpg')`,
             backgroundSize: 'cover',
