@@ -22,7 +22,8 @@ const FloatingOrderButton = () => (
   >
     <img
       src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/59c821b6-54a1-4b83-b1f9-483cfbde17e0.png"
-      alt="Max"
+      alt=""
+      aria-hidden="true"
       className="w-4 h-4"
     />
     Заказать расчёт

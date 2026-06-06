@@ -23,8 +23,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 md:pt-16">
+      <main>
+      <section aria-label="Главная" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 md:pt-16">
         <div 
+          aria-hidden="true"
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `linear-gradient(rgba(26, 31, 44, 0.7), rgba(26, 31, 44, 0.9)), url('https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/3f21c25b-c0c4-466e-8bff-33c328682074.jpg')`,
@@ -42,7 +44,8 @@ const Index = () => {
             />
             <img 
               src="https://cdn.poehali.dev/files/4982d315-c954-414c-ae74-6dce639d2efc.png" 
-              alt="LaserDesign" 
+              alt=""
+              aria-hidden="true"
               className="h-10 md:h-18 w-auto brightness-0 invert"
             />
           </div>
@@ -258,7 +261,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button size="lg" className="text-base md:text-lg px-7 md:px-10 py-5 md:py-7 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <a href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                  <img src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/59c821b6-54a1-4b83-b1f9-483cfbde17e0.png" alt="Max" className="w-5 h-5 mr-2" />
+                  <img src="https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/bucket/59c821b6-54a1-4b83-b1f9-483cfbde17e0.png" alt="" aria-hidden="true" className="w-5 h-5 mr-2" />
                   Заказать Расчет
                 </a>
               </Button>
@@ -271,6 +274,7 @@ const Index = () => {
         </div>
       </section>
 
+      </main>
       <footer className="py-8 pb-24 md:pb-8 bg-background border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-3">
@@ -279,7 +283,7 @@ const Index = () => {
             </p>
             {visitCount !== null && (
               <p className="text-muted-foreground/50 text-xs flex items-center justify-center gap-1.5">
-                <Icon name="Eye" size={12} />
+                <Icon name="Eye" size={12} aria-hidden="true" />
                 Посетителей: {visitCount.toLocaleString("ru-RU")}
               </p>
             )}

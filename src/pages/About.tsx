@@ -75,7 +75,7 @@ const About = () => {
           </div>
 
           <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 shrink-0">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 shrink-0" aria-hidden="true">
               <Icon name="MessageCircle" size={22} className="text-primary" />
             </div>
             <div className="flex-1">
