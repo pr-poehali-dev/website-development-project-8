@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { sendYandexConversion } from "./lib/metrika";
 import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
@@ -18,6 +19,7 @@ const FloatingOrderButton = () => (
     href="https://max.ru/join/a4_5L5pExpVEy3qxjuE6RPyHUMtvbq-6MzLIhrts1PM"
     target="_blank"
     rel="noopener noreferrer"
+    onClick={() => sendYandexConversion("order_click")}
     className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full shadow-lg text-sm font-semibold active:scale-95 transition-transform whitespace-nowrap"
   >
     <img
