@@ -69,7 +69,7 @@ DEFAULT_GALLERY = [
     {"id": 3, "src": "https://cdn.poehali.dev/files/f07e09e4-132c-41f1-8fa1-14f720a7eb22.png", "alt": "Гравировка на камне", "title": "Гравировка на камне", "desc": "Художественная гравировка на натуральных материалах", "active": True},
     {"id": 4, "src": "https://cdn.poehali.dev/files/3e7289b1-1a60-45d4-b257-b70bf7c0aa31.JPG", "alt": "Портреты на металле", "title": "Художественные портреты", "desc": "Фотореалистичные портреты на металлических пластинах", "active": True},
     {"id": 5, "src": "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/09cc1db6-e0d1-4b3b-be90-e912300e8891.jpg", "alt": "Корпоративные VIP-сувениры", "title": "Корпоративный VIP", "desc": "Элитные наборы с ювелирной гравировкой логотипа", "active": True},
-    {"id": 6, "src": "https://cdn.poehali.dev/projects/b2a4e3f3-5457-4799-aac4-89add7e3503f/files/2f689d2c-2df6-49fd-8408-5a41c2e90d50.jpg", "alt": "Памятные подарки", "title": "Памятные подарки", "desc": "Зажигалки и аксессуары с личной гравировкой", "active": True},
+
     {"id": 7, "src": "https://cdn.poehali.dev/files/66466256-19a5-4c2a-b6ff-f5238d500d4e.png", "alt": "Брелок Alfa Romeo", "title": "Автомобильные брелоки", "desc": "Эксклюзивные брелоки с логотипами автобрендов", "active": True},
     {"id": 8, "src": "https://cdn.poehali.dev/files/1a3f3f9f-482f-4496-8a8b-c8be1d839cbe.png", "alt": "Шильдик BMW M", "title": "Именные шильдики", "desc": "Персонализированные таблички с логотипами", "active": True},
     {"id": 9, "src": "https://cdn.poehali.dev/files/dfaab186-b4e5-4186-bb98-81319bc33251.JPG", "alt": "Гравировка на бутылке водки", "title": "Подарочные бутылки", "desc": "Персональная гравировка на металлических ёмкостях", "active": True},
