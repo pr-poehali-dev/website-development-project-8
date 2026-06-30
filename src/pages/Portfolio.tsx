@@ -62,7 +62,7 @@ const Portfolio = () => {
                     <p className="text-muted-foreground text-xs sm:text-sm hidden sm:block">{item.desc}</p>
                   </div>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
+                <div className="удалить" aria-hidden="true">
                   <div className="bg-background/60 rounded-full p-2 md:p-3">
                     <Icon name="ZoomIn" size={22} className="text-white" />
                   </div>
